@@ -21,6 +21,19 @@ define MAKEFILE_HELP
 * clean
 	Limpa artefatos para uma nova compilação
 
+* prepare
+	Prepara o ambiente do QMK para uma instalação limpa.
+
+* install
+	Cria os links simbólicos necessários para a compilação do layout
+
+* uninstall
+	Remove os links simbólicos necessários para a compilação do layout
+
+* build
+	Compila os layouts (no momento, apenas o layout do planck)
+
+
 * 
 endef
 export MAKEFILE_HELP
@@ -36,9 +49,11 @@ prepare:
 
 install:
 	ln -s $(PWD)/planck $(QMK_DIR)/keyboards/$(KEYBOARD)/keymaps/$(USERNAME)
+	ln -s $(PWD)/user $(QMK_DIR)/users/$(USERNAME)
 
 uninstall:
 	rm $(QMK_DIR)/keyboards/$(KEYBOARD)/keymaps/$(USERNAME)
+	rm $(QMK_DIR)/users/$(USERNAME)
 
 build: 
 	qmk compile -kb planck/rev6 -km $(USERNAME)
