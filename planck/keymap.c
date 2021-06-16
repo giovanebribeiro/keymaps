@@ -24,23 +24,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
  *                  ,-----------------------------------------------------------------------------------.
- *                  | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+ *                  | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | = +  |
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for Esc ---> | Ctrl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   Ç  | Ctrl | ------> Tap for Enter 
+ * Tap for Esc ---> | Ctrl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |  ; : | Ctrl | ------> Tap for Enter 
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for ( -----> | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift | ------> Tap for )
+ * Tap for ( -----> | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |  - _ |  ' " |  / ? |Shift | ------> Tap for )
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- *                  |  [{  |Hyper | ,<   |Super |Lower |    Space    |Raise |Super | .>   |Hyper |  ]}  |
+ *                  |  [{  | Alt  | ,<   |Super |Lower |    Space    |Raise |Super | .>   |AltGr |  ]}  |
  *                  `-----------------------------------------------------------------------------------'
  *                          /                                                               \
  *                         /__ Tap for Home                                                 \__ Tap for End
  *
  */
 [QWERTY_LAYER] = LAYOUT_planck_grid_wrapper(
-    KC_TAB,  _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, KC_BSPC,
+    KC_TAB,  _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, KC_EQL,
     CTL_ESC, _________________QWERTY_L2_________________, _________________QWERTY_R2_________________, CTL_ENT,
     KC_LSPO, _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, KC_RSPC,
-    KC_LBRC, HYPER_L, KC_COMM, KC_LGUI, XXXXXXX,   KC_SPC,  KC_SPC,  XXXXXXX,   KC_RGUI, KC_DOT,  HYPER_R, KC_RBRC
+    KC_LBRC, ALT_L, KC_COMM, KC_LGUI, XXXXXXX,   KC_SPC,  KC_SPC,  XXXXXXX,   KC_RGUI, KC_DOT,  ALT_R, KC_RBRC
 )
 
 };

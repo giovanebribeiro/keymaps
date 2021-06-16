@@ -58,5 +58,8 @@ uninstall:
 build: 
 	qmk compile -kb planck/rev6 -km $(USERNAME)
 
+flash: clean build
+	qmk flash -kb planck/rev6 -km $(USERNAME)
+
 help: 
 	@echo "$$MAKEFILE_HELP"
