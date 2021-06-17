@@ -22,18 +22,24 @@
 #include "keymap_br_abnt2.h"
 
 enum user_layers {
-    QWERTY_LAYER
+    QWERTY_LAYER,
+    LOWER_LAYER
 };
 
 enum user_keycodes {
-    QWERTY = SAFE_RANGE
+    QWERTY = SAFE_RANGE,
+    LOWER
+};
+
+enum custom_keycodes {
+    DOUBLE_0
 };
 
 
 /*
  * Switcing layers
  */
-//#define LOWER MO(LOWER_LAYER)
+#define LOWER MO(LOWER_LAYER)
 //#define RAISE MO(RAISE_LAYER)
 
 /*
@@ -47,8 +53,10 @@ enum user_keycodes {
 #define LAYOUT_planck_grid_wrapper(...) LAYOUT_planck_grid(__VA_ARGS__)
 
 /*
- * Keyboard rows - qwerty layer
+ * Keyboard rows
  */
+
+// qwerty layer
 #define _________________QWERTY_L1_________________ KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define _________________QWERTY_L2_________________ KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define _________________QWERTY_L3_________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
@@ -57,13 +65,15 @@ enum user_keycodes {
 #define _________________QWERTY_R2_________________ KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
 #define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_MINS, KC_QUOT, KC_SLSH
 
-//#define _________________LOWER_R1__________________ KC_PAST,   KC_PPLS,   KC_7,    KC_8,    KC_9
-//#define _________________LOWER_R2__________________ KC_B,      KC_PMNS,   KC_4,    KC_5,    KC_6
-//#define _________________LOWER_R3__________________ KC_F,      KC_0,      KC_1,    KC_2,    KC_3
-//
-//#define _________________LOWER_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_PEQL
-//#define _________________LOWER_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_A
-//#define _________________LOWER_L3__________________ KC_F9,   KC_F10,  KC_C,    KC_D,    KC_E
+// lower layer
+#define _________________LOWER_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   BR_1UP
+#define _________________LOWER_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   BR_2UP
+#define _________________LOWER_L3__________________ KC_F9,   KC_F10,  KC_F11,  KC_F12,  BR_3UP
+
+#define _________________LOWER_R1__________________ KC_PAST,   KC_PPLS,   KC_7,    KC_8,    KC_9
+#define _________________LOWER_R2__________________ KC_PSLS,   KC_PMNS,   KC_4,    KC_5,    KC_6
+#define _________________LOWER_R3__________________ DOUBLE_0,  KC_0,      KC_1,    KC_2,    KC_3
+
 //
 //#define _________________RAISE_L1__________________ KC_F11,  KC_F12,            KC_F13,  KC_F14,  KC_F15
 //#define _________________RAISE_L2__________________ KC_EXLM, KC_AT,             KC_HASH, KC_DLR,  KC_PERC

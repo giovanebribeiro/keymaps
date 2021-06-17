@@ -46,6 +46,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+    case DOUBLE_0:
+      if (record->event.pressed){
+          print("Double 0 pressed");
+          SEND_STRING("00");
+      }
+      break;
 /*    case COLEMAK:
       if (record->event.pressed) {
         set_single_persistent_default_layer(_COLEMAK);
