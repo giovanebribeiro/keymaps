@@ -14,6 +14,7 @@ QMK_DIR=$(PWD)/qmk_firmware
 USER_DIR=$(QMK_DIR)/users/$(USERNAME)
 
 KEYBOARD=planck
+KEYBOARD_QMK=$(KEYBOARD)/rev6
 
 define MAKEFILE_HELP
 ## Contém tarefas para automatizar o build dos keymaps dos meus teclados
@@ -33,13 +34,14 @@ define MAKEFILE_HELP
 * build
 	Compila os layouts (no momento, apenas o layout do planck)
 
+* flash
+	Atualiza o firmware do teclado (precisa estar em modo de reset para atualização de firmware)
 
 * 
 endef
 export MAKEFILE_HELP
 
-all:
-	@echo $(PWD)
+all: help
 
 clean:
 	cd $(QMK_DIR) && make clean
@@ -48,7 +50,7 @@ prepare:
 	qmk setup -H $(QMK_DIR)
 
 install:
-	ln -s $(PWD)/planck $(QMK_DIR)/keyboards/$(KEYBOARD)/keymaps/$(USERNAME)
+	ln -s $(PWD)/$(KEYBOARD) $(QMK_DIR)/keyboards/$(KEYBOARD)/keymaps/$(USERNAME)
 	ln -s $(PWD)/user $(QMK_DIR)/users/$(USERNAME)
 
 uninstall:
@@ -56,10 +58,10 @@ uninstall:
 	rm $(QMK_DIR)/users/$(USERNAME)
 
 build: 
-	qmk compile -kb planck/rev6 -km $(USERNAME)
+	qmk compile -kb $(KEYBOARD_QMK) -km $(USERNAME)
 
 flash: clean build
-	qmk flash -kb planck/rev6 -km $(USERNAME)
+	qmk flash -kb $(KEYBOARD_QMK) -km $(USERNAME)
 
 help: 
 	@echo "$$MAKEFILE_HELP"

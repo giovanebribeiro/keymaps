@@ -220,9 +220,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case KC_LSPO:
     case KC_RSPC:
       return TAPPING_TERM - 50;
-    /*case NAV_BSP:
-    case NAV_SPC:
-      return TAPPING_TERM + 150;*/
     default:
       return TAPPING_TERM;
   }

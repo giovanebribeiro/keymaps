@@ -22,3 +22,11 @@ Este projeto está estruturado da seguinte forma:
 |____qmk_firmware       # Firmware QMK (Adicionado como um submódulo git)
 
 ```
+
+## Como utilizar
+
+A maioria dos procedimentos foram automatizados por meio de um makefile. Para listar todos os
+procedimentos disponíveis, basta executar o comando `make`
+
+o client do QMK não está incluso com este projeto. Você precisa baixá-lo seguindo as instruções
+deste [link](https://docs.qmk.fm/#/newbs_getting_started).
