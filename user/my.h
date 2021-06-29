@@ -24,13 +24,15 @@
 enum user_layers {
     QWERTY_LAYER,
     RAISE_LAYER,
-    LOWER_LAYER
+    LOWER_LAYER,
+    GUI_LAYER
 };
 
 enum user_keycodes {
     QWERTY = SAFE_RANGE,
     RAISE,
-    LOWER
+    LOWER,
+    GUI
 };
 
 enum custom_keycodes {
@@ -43,6 +45,8 @@ enum custom_keycodes {
  */
 #define LOWER MO(LOWER_LAYER)
 #define RAISE MO(RAISE_LAYER)
+#define GUI_L LT(GUI_LAYER, BR_LBRC)
+#define GUI_R LT(GUI_LAYER, BR_RBRC)
 
 /*
  * Mod Taps - https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/mod_tap
