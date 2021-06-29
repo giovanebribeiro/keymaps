@@ -25,14 +25,16 @@ enum user_layers {
     QWERTY_LAYER,
     RAISE_LAYER,
     LOWER_LAYER,
-    GUI_LAYER
+    GUI_LAYER,
+    KEYBOARD_LAYER
 };
 
 enum user_keycodes {
     QWERTY = SAFE_RANGE,
     RAISE,
     LOWER,
-    GUI
+    GUI,
+    KEYBOARD
 };
 
 enum custom_keycodes {
@@ -47,6 +49,7 @@ enum custom_keycodes {
 #define RAISE MO(RAISE_LAYER)
 #define GUI_L LT(GUI_LAYER, BR_LBRC)
 #define GUI_R LT(GUI_LAYER, BR_RBRC)
+#define KBRD  LT(KEYBOARD_LAYER, KC_EQL)
 
 /*
  * Mod Taps - https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/mod_tap
@@ -88,3 +91,22 @@ enum custom_keycodes {
 #define _________________LOWER_R1__________________ KC_DLR,  KC_PERC, BR_CIRC, KC_AMPR, KC_ASTR
 #define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PIPE
 #define _________________LOWER_R3__________________ BR_TILD, XXXXXXX, BR_PND,  BR_NOT,  KC_RPRN
+
+// GUI layer
+#define __________________GUI_L1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________GUI_L2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________GUI_L3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define __________________GUI_R1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________GUI_R2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________GUI_R3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
+// Keyboard layer
+#define __________________KBD_L1___________________ RESET,   DEBUG,   XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBD_L2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBD_L3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define __________________KBD_R1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBD_R2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBD_R3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
