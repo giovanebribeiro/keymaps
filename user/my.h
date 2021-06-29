@@ -79,8 +79,8 @@ enum custom_keycodes {
 // lower layer
 #define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, BR_MORD
 #define _________________LOWER_L2__________________ BR_GRV,  KC_HOME, KC_PGDN, KC_PGUP,  KC_END
-#define _________________LOWER_L3__________________ KC_LPRN, KC_BSLS, BR_CCED, BR_DEG,  BR_FORD
+#define _________________LOWER_L3__________________ XXXXXXX, BR_BSLS, BR_CCED, BR_DEG,  BR_FORD
 
-#define _________________LOWER_R1__________________ KC_DLR,  KC_PERC, BR_CIRC, KC_AMPR, KC_ASTR
-#define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PIPE
-#define _________________LOWER_R3__________________ BR_TILD, XXXXXXX, BR_PND,  BR_NOT,  KC_RPRN
+#define _________________LOWER_R1__________________ KC_ASTR, KC_PERC, BR_CIRC, KC_AMPR, KC_DLR
+#define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, BR_PIPE
+#define _________________LOWER_R3__________________ BR_TILD, XXXXXXX, BR_PND,  BR_NOT,  XXXXXXX
