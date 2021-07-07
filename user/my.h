@@ -75,22 +75,22 @@ enum custom_keycodes {
 #define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_MINS, BR_QUOT, BR_SLSH
 
 // raise layer
-#define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   BR_1UP
-#define _________________RAISE_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   BR_2UP
-#define _________________RAISE_L3__________________ KC_F9,   KC_F10,  KC_F11,  KC_F12,  BR_3UP
+#define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX
+#define _________________RAISE_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX
+#define _________________RAISE_L3__________________ KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX
 
-#define _________________RAISE_R1__________________ KC_PAST,   KC_PPLS,   KC_7,    KC_8,    KC_9
-#define _________________RAISE_R2__________________ KC_PSLS,   KC_PMNS,   KC_4,    KC_5,    KC_6
-#define _________________RAISE_R3__________________ DOUBLE_0,  KC_0,      KC_1,    KC_2,    KC_3
+#define _________________RAISE_R1__________________ XXXXXXX,   XXXXXXX,   KC_7,    KC_8,    KC_9
+#define _________________RAISE_R2__________________ XXXXXXX,   XXXXXXX,   KC_4,    KC_5,    KC_6
+#define _________________RAISE_R3__________________ XXXXXXX,   XXXXXXX,   KC_1,    KC_2,    KC_3
 
 // lower layer
-#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, BR_MORD
-#define _________________LOWER_L2__________________ BR_GRV,  KC_HOME, KC_PGDN, KC_PGUP,  KC_END
-#define _________________LOWER_L3__________________ XXXXXXX, BR_BSLS, BR_CCED, BR_DEG,  BR_FORD
+#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, XXXXXXX
+#define _________________LOWER_L2__________________ BR_GRV,  KC_PSCR, KC_PGDN, KC_PGUP, KC_CAPS
+#define _________________LOWER_L3__________________ BR_BSLS, XXXXXXX, BR_CCED, XXXXXXX, XXXXXXX
 
-#define _________________LOWER_R1__________________ KC_DLR,  KC_PERC, BR_CIRC, KC_AMPR, KC_ASTR
-#define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PIPE
-#define _________________LOWER_R3__________________ BR_TILD, XXXXXXX, BR_PND,  BR_NOT,  KC_RPRN
+#define _________________LOWER_R1__________________ KC_ASTR, KC_PERC, BR_CIRC, KC_AMPR, KC_DLR
+#define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX
+#define _________________LOWER_R3__________________ BR_TILD, XXXXXXX, XXXXXXX, XXXXXXX, BR_PIPE
 
 // GUI layer
 #define __________________GUI_L1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
