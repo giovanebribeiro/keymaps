@@ -72,40 +72,40 @@ enum custom_keycodes {
 
 #define _________________QWERTY_R1_________________ KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
 #define _________________QWERTY_R2_________________ KC_H,    KC_J,    KC_K,    KC_L,    BR_SCLN
-#define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_MINS, BR_QUOT, BR_SLSH
+#define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_COMM, KC_DOT, BR_SLSH
 
 // raise layer
-#define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX
-#define _________________RAISE_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX
-#define _________________RAISE_L3__________________ KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX
+#define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______
+#define _________________RAISE_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______
+#define _________________RAISE_L3__________________ KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______
 
-#define _________________RAISE_R1__________________ XXXXXXX,   XXXXXXX,   KC_7,    KC_8,    KC_9
-#define _________________RAISE_R2__________________ XXXXXXX,   XXXXXXX,   KC_4,    KC_5,    KC_6
-#define _________________RAISE_R3__________________ XXXXXXX,   XXXXXXX,   KC_1,    KC_2,    KC_3
+#define _________________RAISE_R1__________________ _______,   _______,   KC_7,    KC_8,    KC_9
+#define _________________RAISE_R2__________________ _______,   _______,   KC_4,    KC_5,    KC_6
+#define _________________RAISE_R3__________________ _______,   _______,   KC_1,    KC_2,    KC_3
 
 // lower layer
-#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, XXXXXXX
-#define _________________LOWER_L2__________________ BR_GRV,  KC_PSCR, KC_PGDN, KC_PGUP, KC_CAPS
-#define _________________LOWER_L3__________________ BR_BSLS, XXXXXXX, BR_CCED, XXXXXXX, XXXXXXX
+#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, KC_CAPS
+#define _________________LOWER_L2__________________ BR_GRV,  KC_PSCR, KC_PGDN, KC_PGUP, _______
+#define _________________LOWER_L3__________________ BR_BSLS, _______, BR_CCED, _______, _______
 
 #define _________________LOWER_R1__________________ KC_ASTR, KC_PERC, BR_CIRC, KC_AMPR, KC_DLR
-#define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX
-#define _________________LOWER_R3__________________ BR_TILD, XXXXXXX, XXXXXXX, XXXXXXX, BR_PIPE
+#define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______
+#define _________________LOWER_R3__________________ BR_TILD, _______, _______, _______, BR_PIPE
 
 // GUI layer
-#define __________________GUI_L1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________GUI_L2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________GUI_L3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________GUI_L1___________________ _______, _______, _______, _______, _______
+#define __________________GUI_L2___________________ _______, _______, _______, _______, _______
+#define __________________GUI_L3___________________ _______, _______, _______, _______, _______
 
-#define __________________GUI_R1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________GUI_R2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________GUI_R3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________GUI_R1___________________ _______, _______, _______, _______, _______
+#define __________________GUI_R2___________________ _______, _______, _______, _______, _______
+#define __________________GUI_R3___________________ _______, _______, _______, _______, _______
 
 // Keyboard layer
-#define __________________KBD_L1___________________ RESET,   DEBUG,   XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBD_L2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBD_L3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBD_L1___________________ RESET,   DEBUG,   _______, _______, _______
+#define __________________KBD_L2___________________ _______, _______, _______, _______, _______
+#define __________________KBD_L3___________________ _______, _______, _______, _______, _______
 
-#define __________________KBD_R1___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBD_R2___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBD_R3___________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBD_R1___________________ _______, _______, _______, _______, _______
+#define __________________KBD_R2___________________ _______, _______, _______, _______, _______
+#define __________________KBD_R3___________________ _______, _______, _______, _______, _______

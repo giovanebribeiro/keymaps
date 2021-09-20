@@ -25,35 +25,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Qwerty
  *
  *                  ,-----------------------------------------------------------------------------------.
- *                  | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  |KBRD  | ------> Tap for =+
+ * Tap for [{ ----> | GUI  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | GUI  | ------> Tap for ]}
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
  * Tap for Esc ---> | Ctrl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |  ; : | Ctrl | ------> Tap for Enter 
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
  * Tap for ( -----> | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |  - _ |  ' " |  / ? |Shift | ------> Tap for )
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for [{ ----> |  GUI | Alt  | ,<   |Super |Lower |    Space    |Raise |Super | .>   |AltGr | GUI  | ------> Tap for ]}
+ *                  | Tab  | Alt  | ,<   |Super |Lower |    Space    |Raise |Super | .>   |AltGr | KBRD | ------> Tap for =+
  *                  `-----------------------------------------------------------------------------------'
  *                          /                                                               \
  *                         /__ Tap for Home                                                 \__ Tap for End
  *
  */
 [QWERTY_LAYER] = LAYOUT_planck_grid_wrapper(
-    KC_TAB,  _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, KBRD,
+    GUI_L,   _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, GUI_R,
     CTL_ESC, _________________QWERTY_L2_________________, _________________QWERTY_R2_________________, CTL_ENT,
     KC_LSPO, _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, KC_RSPC,
-    GUI_L,   ALT_L, KC_COMM, KC_LGUI,   LOWER,     KC_SPC, KC_SPC,   RAISE,   KC_RGUI, KC_DOT,  ALT_R,   GUI_R
+    KC_TAB,  ALT_L, KC_MINS, KC_LGUI,   LOWER,     KC_SPC, KC_SPC,   RAISE,   KC_RGUI, BR_QUOT,  ALT_R, KBRD
 ),
 
 /* lower
  *
  *                  ,-----------------------------------------------------------------------------------.
- *                  | Tab  |  !   |  @   |  ´   |  #   |      |   *  |   %  |   ^  |  &   |  $   |KBRD  | ------> Tap for =+
+ * Tap for [{ ----> | GUI  |  !   |  @   |  ´   |  #   |CpsLck|   *  |   %  |   ^  |  &   |  $   | GUI  | ------> Tap for ]}
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for Esc ---> | Ctrl |  `   |PrtScr| PgDn | PgUp |CpsLck|   ←  |   ↓  |   ↑  |   →  |      | Ctrl | ------> Tap for Enter 
+ * Tap for Esc ---> | Ctrl |  `   |PrtScr| PgDn | PgUp |      |   ←  |   ↓  |   ↑  |   →  |      | Ctrl | ------> Tap for Enter 
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
  * Tap for ( -----> | Shift|  \   |      |   Ç  |      |      |   ~  |      |   £  |  ¬   |  |   |Shift | ------> Tap for )
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for [{ ----> |  GUI | Alt  | ,<   |Super |Lower |  Backspace  |Raise |Super | .>   |AltGr | GUI  | ------> Tap for ]}
+ *                  | Tab  | Alt  | ,<   |Super |Lower |  Backspace  |Raise |Super | .>   |AltGr | KBRD | ------> Tap for =+
  *                  `-----------------------------------------------------------------------------------' 
  *                          /                                                               \
  *                         /__ Tap for Home                                                 \__ Tap for End
@@ -69,13 +69,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Raise
  *
  *                  ,-----------------------------------------------------------------------------------.
- *                  | Tab  |  F1  |  F2  |  F3  |  F4  |      |      |      |   7  |   8  |   9  |KBRD  | ------> Tap for =+
+ * Tap for [{ ----> | GUI  |  F1  |  F2  |  F3  |  F4  |      |      |      |   7  |   8  |   9  | GUI  | ------> Tap for ]}
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
  * Tap for Esc ---> | Ctrl |  F5  |  F6  |  F7  |  F8  |      |      |      |   4  |   5  |   6  | Ctrl | ------> Tap for Enter 
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
  * Tap for ( -----> | Shift|  F9  |  F10 |  F11 |  F12 |      |      |      |   1  |   2  |   3  |Shift | ------> Tap for )
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for [{ ----> | GUI  | Alt  | ,<   |Super |Lower |    Delete   |Raise |  00  |   0  |AltGr | GUI  | ------> Tap for ]}
+ *                  | Tab  | Alt  | ,<   |Super |Lower |    Delete   |Raise |  00  |   0  |AltGr | KBRD | ------> Tap for =+
  *                  `-----------------------------------------------------------------------------------'
  *                          /                                                               \
  *                         /__ Tap for Home                                                 \__ Tap for End
