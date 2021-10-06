@@ -21,6 +21,8 @@
 #include "muse.h"
 #include "keymap_br_abnt2.h"
 
+#define IGNORE_MOD_TAP_INTERRUPT
+
 enum user_layers {
     QWERTY_LAYER,
     RAISE_LAYER,
@@ -49,13 +51,13 @@ enum custom_keycodes {
 #define RAISE MO(RAISE_LAYER)
 #define GUI_L LT(GUI_LAYER, BR_LBRC)
 #define GUI_R LT(GUI_LAYER, BR_RBRC)
-#define KBRD  LT(KEYBOARD_LAYER, KC_EQL)
+#define KBRD  LT(KEYBOARD_LAYER, KC_CAPS)
 
 /*
  * Mod Taps - https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/mod_tap
  */
 // Home row - left side
-#define GUI_L LGUI_T(KC_A)
+#define CMD_L LGUI_T(KC_A)
 #define ALT_L ALT_T(KC_S)
 #define SFT_L LSFT_T(KC_D) 
 #define CTL_L CTL_T(KC_F)
@@ -63,7 +65,7 @@ enum custom_keycodes {
 #define CTL_R CTL_T(KC_J)
 #define SFT_R RSFT_T(KC_K) 
 #define ALT_R ALGR_T(KC_L)
-#define GUI_R LGUI_T(BR_SCLN)
+#define CMD_R LGUI_T(BR_SCLN)
 
 #define LAYOUT_planck_grid_wrapper(...) LAYOUT_planck_grid(__VA_ARGS__)
 
@@ -73,12 +75,12 @@ enum custom_keycodes {
 
 // qwerty layer
 #define _________________QWERTY_L1_________________ KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
-#define _________________QWERTY_L2_________________ GUI_L,   ALT_L,   SFT_L,   CTL_L,    KC_G
+#define _________________QWERTY_L2_________________ CMD_L,   ALT_L,   SFT_L,   CTL_L,   KC_G
 #define _________________QWERTY_L3_________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
 #define _________________QWERTY_R1_________________ KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
-#define _________________QWERTY_R2_________________ KC_H,    KC_J,    KC_K,    KC_L,    BR_SCLN
-#define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_COMM, KC_DOT, BR_SLSH
+#define _________________QWERTY_R2_________________ KC_H,    CTL_R,   SFT_R,   ALT_R,   CMD_R
+#define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_COMM, KC_DOT,  BR_SLSH
 
 // raise layer
 #define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______
@@ -90,11 +92,11 @@ enum custom_keycodes {
 #define _________________RAISE_R3__________________ _______,   _______,   KC_1,    KC_2,    KC_3
 
 // lower layer
-#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, KC_CAPS
+#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, _______
 #define _________________LOWER_L2__________________ BR_GRV,  KC_PSCR, KC_PGDN, KC_PGUP, _______
 #define _________________LOWER_L3__________________ BR_BSLS, _______, BR_CCED, _______, _______
 
-#define _________________LOWER_R1__________________ KC_ASTR, KC_PERC, BR_CIRC, KC_AMPR, KC_DLR
+#define _________________LOWER_R1__________________ _______, _______, BR_CIRC, KC_AMPR, KC_DLR
 #define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______
 #define _________________LOWER_R3__________________ BR_TILD, _______, _______, _______, BR_PIPE
 
