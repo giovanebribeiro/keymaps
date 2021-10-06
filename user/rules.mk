@@ -7,5 +7,6 @@ DYNAMIC_MACRO_ENABLE = yes
 MIDI_ENABLE          = no
 MOUSEKEY_ENABLE      = no
 NKRO_ENABLE          = yes
+AUDIO_ENABLE         = yes
 
 SRC += my.c

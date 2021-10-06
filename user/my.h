@@ -21,8 +21,6 @@
 #include "muse.h"
 #include "keymap_br_abnt2.h"
 
-#define IGNORE_MOD_TAP_INTERRUPT
-
 enum user_layers {
     QWERTY_LAYER,
     RAISE_LAYER,
