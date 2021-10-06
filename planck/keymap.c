@@ -25,16 +25,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Qwerty
  *
  *                  ,-----------------------------------------------------------------------------------.
- * Tap for [{ ----> | GUI  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | GUI  | ------> Tap for ]}
+ *                  | [{ ª |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | ]} º |
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for Esc ---> | Ctrl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |  ; : | Ctrl | ------> Tap for Enter 
+ *                  | Esc  |GUI/A |Alt/S |Sft/D |Ctrl/F|   G  |   H  |Ctrl/J|Sft/K |Alt/L |GUI/;:|Enter |  
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- * Tap for ( -----> | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |  - _ |  ' " |  / ? |Shift | ------> Tap for )
+ *                  |   (  |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |  ,<  |  .>  | /? ° |  )   | 
  *                  |------+------+------+------+------+------+------+------+------+------+------+------|
- *                  | Tab  | Alt  | ,<   |Super |Lower |    Space    |Raise |Super | .>   |AltGr | KBRD | ------> Tap for =+
+ *                  |  Tab | Home |  *   |  -_  |Lower |    Space    |Raise | =+ § |  '"  |  End | KBRD | ------> Tap to lock raise layer to enable numpad
  *                  `-----------------------------------------------------------------------------------'
- *                          /                                                               \
- *                         /__ Tap for Home                                                 \__ Tap for End
+ *
  *
  */
 [QWERTY_LAYER] = LAYOUT_planck_grid_wrapper(

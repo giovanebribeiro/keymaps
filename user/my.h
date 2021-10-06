@@ -54,10 +54,16 @@ enum custom_keycodes {
 /*
  * Mod Taps - https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/mod_tap
  */
-#define ALT_L ALT_T(KC_HOME)
-#define ALT_R ALGR_T(KC_END)
-#define CTL_ESC CTL_T(KC_ESC)
-#define CTL_ENT CTL_T(KC_ENT)
+// Home row - left side
+#define GUI_L LGUI_T(KC_A)
+#define ALT_L ALT_T(KC_S)
+#define SFT_L LSFT_T(KC_D) 
+#define CTL_L CTL_T(KC_F)
+// Home row - right side
+#define CTL_R CTL_T(KC_J)
+#define SFT_R RSFT_T(KC_K) 
+#define ALT_R ALGR_T(KC_L)
+#define GUI_R LGUI_T(BR_SCLN)
 
 #define LAYOUT_planck_grid_wrapper(...) LAYOUT_planck_grid(__VA_ARGS__)
 
@@ -67,7 +73,7 @@ enum custom_keycodes {
 
 // qwerty layer
 #define _________________QWERTY_L1_________________ KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
-#define _________________QWERTY_L2_________________ KC_A,    KC_S,    KC_D,    KC_F,    KC_G
+#define _________________QWERTY_L2_________________ GUI_L,   ALT_L,   SFT_L,   CTL_L,    KC_G
 #define _________________QWERTY_L3_________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
 #define _________________QWERTY_R1_________________ KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
