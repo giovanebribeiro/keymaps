@@ -26,7 +26,8 @@ enum user_layers {
     RAISE_LAYER,
     LOWER_LAYER,
     GUI_LAYER,
-    KEYBOARD_LAYER
+    KEYBOARD_LAYER,
+    GAME_LAYER
 };
 
 enum user_keycodes {
@@ -34,7 +35,8 @@ enum user_keycodes {
     RAISE,
     LOWER,
     GUI,
-    KEYBOARD
+    KEYBOARD,
+    GAME
 };
 
 enum custom_keycodes {
@@ -50,6 +52,7 @@ enum custom_keycodes {
 #define GUI_L LT(GUI_LAYER, BR_LBRC)
 #define GUI_R LT(GUI_LAYER, BR_RBRC)
 #define KBRD  LT(KEYBOARD_LAYER, KC_CAPS)
+#define GAME TG(GAME_LAYER)
 
 /*
  * Mod Taps - https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/mod_tap
@@ -81,22 +84,22 @@ enum custom_keycodes {
 #define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_COMM, KC_DOT,  BR_SLSH
 
 // raise layer
-#define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______
+#define _________________RAISE_L1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   BR_PND
 #define _________________RAISE_L2__________________ KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______
 #define _________________RAISE_L3__________________ KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______
 
 #define _________________RAISE_R1__________________ _______,   _______,   KC_7,    KC_8,    KC_9
 #define _________________RAISE_R2__________________ _______,   _______,   KC_4,    KC_5,    KC_6
-#define _________________RAISE_R3__________________ _______,   _______,   KC_1,    KC_2,    KC_3
+#define _________________RAISE_R3__________________ _______,   BR_PIPE,   KC_1,    KC_2,    KC_3
 
 // lower layer
-#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, _______
-#define _________________LOWER_L2__________________ BR_GRV,  KC_PSCR, KC_PGDN, KC_PGUP, _______
-#define _________________LOWER_L3__________________ BR_BSLS, _______, BR_CCED, _______, _______
+#define _________________LOWER_L1__________________ KC_EXLM, KC_AT,   BR_ACUT, KC_HASH, KC_DLR
+#define _________________LOWER_L2__________________ BR_GRV,  _______, _______, KC_PGUP, _______
+#define _________________LOWER_L3__________________ BR_BSLS, _______, BR_CCED, KC_PGDN, _______
 
-#define _________________LOWER_R1__________________ _______, _______, BR_CIRC, KC_AMPR, KC_DLR
+#define _________________LOWER_R1__________________ BR_NOT,  KC_AMPR, BR_CIRC, BR_LPRN, BR_RPRN
 #define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______
-#define _________________LOWER_R3__________________ BR_TILD, _______, _______, _______, BR_PIPE
+#define _________________LOWER_R3__________________ BR_TILD, BR_BSLS, BR_SUP1, BR_SUP2, BR_SUP3
 
 // GUI layer
 #define __________________GUI_L1___________________ _______, _______, _______, _______, _______
@@ -115,3 +118,14 @@ enum custom_keycodes {
 #define __________________KBD_R1___________________ _______, _______, _______, _______, _______
 #define __________________KBD_R2___________________ _______, _______, _______, _______, _______
 #define __________________KBD_R3___________________ _______, _______, _______, _______, _______
+
+// Game layer
+#define _________________GAME_L1__________________ _______, KC_UP,   _______, _______, _______
+#define _________________GAME_L2__________________ KC_LEFT, KC_DOWN, KC_RGHT, _______, _______
+#define _________________GAME_L3__________________ _______, _______, _______, _______, _______
+
+#define _________________GAME_R1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______
+#define _________________GAME_R2__________________ KC_F6,   KC_F7,   KC_F8,   KC_F9,   _______
+#define _________________GAME_R3__________________ KC_F11,  KC_F12,  KC_F13,  KC_F14,  _______
+
+
