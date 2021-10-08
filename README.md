@@ -3,6 +3,8 @@
 Meus layouts de teclado mecanico (utilizando o firmware QMK). Baseado
 [neste](https://github.com/noahfrederick/qmk-keymaps) projeto incrível.
 
+** Layout planck: http://www.keyboard-layout-editor.com/#/gists/007758183ad549d0f8c639c4e0617ce2 **
+
 ## Organização
 
 Este projeto está estruturado da seguinte forma:
