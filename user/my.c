@@ -52,6 +52,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           SEND_STRING("00");
       }
       break;
+    case GAME:
+      if (record->event.pressed) {
+        set_single_persistent_default_layer(GAME_LAYER);
+      }
+      return false;
+      break;
 /*    case COLEMAK:
       if (record->event.pressed) {
         set_single_persistent_default_layer(_COLEMAK);

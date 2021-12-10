@@ -52,7 +52,6 @@ enum custom_keycodes {
 #define GUI_L LT(GUI_LAYER, BR_LBRC)
 #define GUI_R LT(GUI_LAYER, BR_RBRC)
 #define KBRD  LT(KEYBOARD_LAYER, KC_CAPS)
-#define GAME TG(GAME_LAYER)
 
 /*
  * Mod Taps - https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/mod_tap
@@ -99,7 +98,7 @@ enum custom_keycodes {
 
 #define _________________LOWER_R1__________________ BR_NOT,  KC_AMPR, BR_CIRC, BR_LPRN, BR_RPRN
 #define _________________LOWER_R2__________________ KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______
-#define _________________LOWER_R3__________________ BR_TILD, BR_BSLS, BR_SUP1, BR_SUP2, BR_SUP3
+#define _________________LOWER_R3__________________ BR_TILD, _______, BR_SUP1, BR_SUP2, BR_SUP3
 
 // GUI layer
 #define __________________GUI_L1___________________ _______, _______, _______, _______, _______
@@ -111,7 +110,7 @@ enum custom_keycodes {
 #define __________________GUI_R3___________________ _______, _______, _______, _______, _______
 
 // Keyboard layer
-#define __________________KBD_L1___________________ RESET,   DEBUG,   _______, _______, _______
+#define __________________KBD_L1___________________ RESET,   DEBUG,   GAME,    QWERTY,  _______
 #define __________________KBD_L2___________________ _______, _______, _______, _______, _______
 #define __________________KBD_L3___________________ _______, _______, _______, _______, _______
 
@@ -120,12 +119,12 @@ enum custom_keycodes {
 #define __________________KBD_R3___________________ _______, _______, _______, _______, _______
 
 // Game layer
-#define _________________GAME_L1__________________ _______, KC_UP,   _______, _______, _______
-#define _________________GAME_L2__________________ KC_LEFT, KC_DOWN, KC_RGHT, _______, _______
-#define _________________GAME_L3__________________ _______, _______, _______, _______, _______
+#define __________________GAME_L1__________________ _______, KC_UP,   _______, _______, KC_F1
+#define __________________GAME_L2__________________ KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_F7
+#define __________________GAME_L3__________________ _______, _______, _______, _______, KC_F13
 
-#define _________________GAME_R1__________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______
-#define _________________GAME_R2__________________ KC_F6,   KC_F7,   KC_F8,   KC_F9,   _______
-#define _________________GAME_R3__________________ KC_F11,  KC_F12,  KC_F13,  KC_F14,  _______
+#define __________________GAME_R1__________________ KC_F2,  KC_F3,  KC_F4,  KC_F5, _______
+#define __________________GAME_R2__________________ KC_F8,  KC_F9,  KC_F10, KC_F11, _______
+#define __________________GAME_R3__________________ KC_F14, KC_F15, KC_F16, KC_F17, _______
 
 
