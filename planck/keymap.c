@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [QWERTY_LAYER] = LAYOUT_planck_grid_wrapper(
     GUI_L,   _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, GUI_R,
     KC_ESC,  _________________QWERTY_L2_________________, _________________QWERTY_R2_________________, KC_ENT,
-    XXXXXXX, _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, KC_PSCR,
+    BR_BSLS, _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, KC_PSCR,
     KC_TAB,  KC_HOME, BR_ASTR, KC_MINS,   LOWER,     KC_SPC, KC_SPC,   RAISE,   BR_EQL, BR_QUOT,  KC_END, KBRD
 ),
 
@@ -130,17 +130,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                  |------+-----+------+------+------+------+------+------+------+------+------+-------|
  *                  | Esc  |  ←  |   ↓  |   →  |      |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |       |  
  *                  |------+-----+------+------+------+------+------+------+------+------+------+-------|
- *                  | Shift|     |      |      |      |  F13 |  F14 |  F15 |  F16 |  F17 |  F18 |       | 
+ *                  | Ctrl |     |      |      |      |  F13 |  F14 |  F15 |  F16 |  F17 |  F18 |       | 
  *                  |------+-----+------+------+------+------+------+------+------+------+------+-------|
- *                  | Ctrl | Alt |      |      |      |    Space    |  F19 |  F20 |      |      | KBRD  | 
+ *                  | Shift| Alt |      |      |      |    Space    |  F19 |  F20 |      |      | KBRD  | 
  *                  `-----------------------------------------------------------------------------------'
  *                         
  */
 [GAME_LAYER] = LAYOUT_planck_grid_wrapper(
     XXXXXXX, __________________GAME_L1__________________, __________________GAME_R1__________________, XXXXXXX,
-    XXXXXXX, __________________GAME_L2__________________, __________________GAME_R2__________________, XXXXXXX,
-    XXXXXXX, __________________GAME_L3__________________, __________________GAME_R3__________________, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    KC_ESC,  __________________GAME_L2__________________, __________________GAME_R2__________________, XXXXXXX,
+    KC_LCTL, __________________GAME_L3__________________, __________________GAME_R3__________________, XXXXXXX,
+    KC_LSFT, KC_LOPT, XXXXXXX, XXXXXXX, XXXXXXX,  KC_SPC,  KC_SPC,  KC_F19, XXXXXXX, XXXXXXX, XXXXXXX,    KBRD
 ),
 
 };
