@@ -19,6 +19,9 @@ KEYBOARD_QMK=$(KEYBOARD)/rev6
 define MAKEFILE_HELP
 ## Contém tarefas para automatizar o build dos keymaps dos meus teclados
 
+* setup
+	Instala firmware + configurações iniciais
+
 * clean
 	Limpa artefatos para uma nova compilação
 
