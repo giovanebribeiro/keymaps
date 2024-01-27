@@ -19,11 +19,11 @@ KEYBOARD_QMK=$(KEYBOARD)/rev6
 define MAKEFILE_HELP
 ## Contém tarefas para automatizar o build dos keymaps dos meus teclados
 
+* setup
+	Instala firmware + configurações iniciais
+
 * clean
 	Limpa artefatos para uma nova compilação
-
-* prepare
-	Prepara o ambiente do QMK para uma instalação limpa.
 
 * install
 	Cria os links simbólicos necessários para a compilação do layout
@@ -43,19 +43,24 @@ export MAKEFILE_HELP
 
 all: help
 
+setup:
+	qmk config user.qmk_home=$(QMK_DIR)
+	qmk setup
+	sudo cp $(PWD)/qmk_firmware/util/udev/50-qmk.rules /etc/udev/rules.d/
+
+
 clean:
 	cd $(QMK_DIR) && make clean
-
-prepare:
-	qmk setup -H $(QMK_DIR)
 
 install:
 	ln -s $(PWD)/$(KEYBOARD) $(QMK_DIR)/keyboards/$(KEYBOARD)/keymaps/$(USERNAME)
 	ln -s $(PWD)/user $(QMK_DIR)/users/$(USERNAME)
+	ln -s $(QMK_DIR)/quantum/keymap_extras/keymap_brazilian_abnt2.h $(QMK_DIR)/users/$(USERNAME)/keymap_br_abnt2.h 
 
 uninstall:
 	rm $(QMK_DIR)/keyboards/$(KEYBOARD)/keymaps/$(USERNAME)
 	rm $(QMK_DIR)/users/$(USERNAME)
+	rm $(PWD)/user/keymap_br_abnt2.h
 
 build: 
 	qmk compile -kb $(KEYBOARD_QMK) -km $(USERNAME)
