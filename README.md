@@ -29,22 +29,17 @@ Este projeto está estruturado da seguinte forma:
 
 Antes de começar tudo, você precisa instalar algumas ferramentas. Depois, basta executar o comando `make setup`:
 
+### Client QMK
+
+O client do QMK não está incluso com este projeto. Você precisa baixá-lo seguindo as instruções deste [link](https://docs.qmk.fm/#/newbs_getting_started).
+
 ### ARM GNU Toolchain
 
-Inicialmente, baixe o tarball correspondente (x86_64) [neste link](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+Para instalar o toolchain do ARM, basta executar o arquivo `install-arm.sh`. 
 
-Em seguida, instale a aplicação:
+Caso ocorra algum erro, deve ser analisado caso a caso. Se faltar alguma dependência, deve ser instalada manualmente. Infelizmente, não há como saber quais dependências estão faltando 
+pois depende muito do seu sistema. Como exemplo, temos a instalação da dependência libncurses.so.5:
 
-```
-$ sudo tar xf arm-gnu-toolchain-YOUR_VERSION-x86_64-arm-none-eabi.tar.xz -C /usr/share/
-$ sudo ln -s /usr/share/arm-gnu-toolchain-YOUR_VERSION-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc
-$ sudo ln -s /usr/share/arm-gnu-toolchain-YOUR_VERSION-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++
-$ sudo ln -s /usr/share/arm-gnu-toolchain-YOUR_VERSION-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb /usr/bin/arm-none-eabi-gdb
-$ sudo ln -s /usr/share/arm-gnu-toolchain-YOUR_VERSION-x86_64-arm-none-eabi/bin/arm-none-eabi-size /usr/bin/arm-none-eabi-size
-$ sudo ln -s /usr/share/arm-gnu-toolchain-YOUR_VERSION-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /usr/bin/arm-none-eabi-objcopy
-```
-
-Em seguida, testamos para saber se está tudo ok. Caso falte alguma dependência, deve ser instalada manualmente. Infelizmente, não há como saber quais dependências estão faltando pois depende muito do seu sistema. Como exemplo, temos a instalação da dependência libncurses.so.5:
 ```
 $ sudo apt install libncurses-dev
 $ sudo ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5
@@ -52,10 +47,10 @@ $ sudo ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/x86_64-linux-gnu/l
 
 # Testando tudo:
 
-$ arm-none-eabi-gcc --version
-$ arm-none-eabi-g++ --version
-$ arm-none-eabi-gdb --version
-$ arm-none-eabi-size --version
+$ arch64-none-linux-gnu-gcc --version
+$ arch64-none-linux-gnu-g++ --version
+$ arch64-none-linux-gnu-gdb --version
+$ arch64-none-linux-gnu-size --version
 ```
 
 ## Como utilizar
@@ -63,5 +58,4 @@ $ arm-none-eabi-size --version
 A maioria dos procedimentos foram automatizados por meio de um makefile. Para listar todos os
 procedimentos disponíveis, basta executar o comando `make`
 
-o client do QMK não está incluso com este projeto. Você precisa baixá-lo seguindo as instruções
-deste [link](https://docs.qmk.fm/#/newbs_getting_started).
+

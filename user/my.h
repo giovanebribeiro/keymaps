@@ -69,6 +69,17 @@ enum custom_keycodes {
 
 #define LAYOUT_planck_grid_wrapper(...) LAYOUT_planck_grid(__VA_ARGS__)
 
+/* Teams keybindings */
+// raise hand
+#define HND_E C(S(KC_K))
+// enable camera
+#define VID_E C(S(KC_O))
+// enable mic
+#define MIC_E C(S(KC_M))
+// finish call
+#define CALL_F C(S(KC_H))
+
+
 /*
  * Keyboard rows
  */
@@ -101,7 +112,7 @@ enum custom_keycodes {
 #define _________________LOWER_R3__________________ BR_TILD, _______, BR_SUP1, BR_SUP2, BR_SUP3
 
 // GUI layer
-#define __________________GUI_L1___________________ _______, _______, _______, _______, _______
+#define __________________GUI_L1___________________ HND_E,   VID_E,   MIC_E,   CALL_F,  _______
 #define __________________GUI_L2___________________ _______, _______, _______, _______, _______
 #define __________________GUI_L3___________________ _______, _______, _______, _______, _______
 
